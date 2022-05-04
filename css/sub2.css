@@ -1,0 +1,200 @@
+@import url(reset.css);
+/*  sub2.css  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url(../icofont/icofont.css);
+@import url(../icofont/icofont.min.css);
+
+/*  common  */
+body{font-size: 14px;font-family: 'Noto Sans','Noto Sans KR',Helvetica,sans-serif;color: #101820;}
+a{color: #101820;text-decoration: none;}
+a:hover{color: #101820;text-decoration: none;}
+a >span.linkline{width: 100%;background-image: linear-gradient(transparent calc(100% - 1px),#101820 1px);background-repeat: no-repeat;background-size: 0 100%;
+                      transition: background-size 0.3s ease-in-out;-o-transition: background-size 0.3s ease-in-out;-moz-transition: background-size 0.3s ease-in-out;-webkit-transition: background-size 0.3s ease-in-out;}
+a:hover >span.linkline{width: 100%; background-size: 100% 100%;}
+
+
+/*  layout  */
+#wrap{width: 100%;}
+    #header{position: relative; width: 100%;height: 64px;}
+    #header:before{content: "";position: absolute;bottom: 0; width: 100%;height: 1px;background: #cfd1d2;}
+        .header_wrap{width: 100%;background:#fff;}
+            .header_inner{position: relative;width: 100%;margin: 0 auto;}
+    #container{width: 100%;border-bottom: 1px solid #cfd1d2;}
+        .content1{width: 900px;margin: 110px auto;box-sizing: border-box;}
+    #footer{width: 100%;}
+        .footer_inner{width: 1362px;margin: 50px auto;}
+
+/*  logo  */
+.header_inner > h1.logo{position: absolute;left:280px; top: 21px;}
+.header_inner > h1.logo > a{display: block;width:135px;height: 21px; background: url(../images/logo_b.png) no-repeat 0 0;text-indent: -9999px;overflow: hidden;}
+
+/*  gnb  */
+.gnb > ul{width: 100%; text-align: center;}
+.gnb > ul > li{display: inline-block;padding: 0 20px;}
+.gnb > ul > li > a{display: block;width: 100%; font-size: 17px;font-weight: 600;color: #101820;line-height: 64px;background-image: linear-gradient(transparent calc(100% - 4px),#101010 4px);background-repeat: no-repeat;background-size: 0 100%;
+                   transition: background-size 0.3s ease-in-out;}
+.gnb > ul > li:hover > a{width: 100%;background-size: 100% 100%;}
+.gnb > ul > li > div{display: none; position: absolute;left: 0; height: 64px;background:#fff;}
+.gnb > ul > li:hover > div{display: block;}
+
+.gnb > ul > li:nth-child(2) > div{height: 260px;}
+.gnb > ul > li > div > ul{vertical-align: top;}
+.gnb > ul > li > div > ul > li{display: inline-block;padding: 0 20px;text-align: left;}
+.gnb > ul > li > div > ul > li > a{display: block;font-size: 16px;font-weight: 700;color: #101820; line-height: 64px;}
+
+.gnb > ul > li > div > ul > li > ul{float: left;}
+.gnb > ul > li > div > ul > li > ul > li > a{display: block;padding: 5px 0; font-size: 15px;font-weight: 500;color: #54565b; line-height:1.4;}
+
+.gnb > ul > li:first-child > div{margin-left: 680px;}
+.gnb > ul > li:nth-child(2) > div{margin-left: 600px;}
+.gnb > ul > li:nth-child(3) > div{margin-left: 850px;}
+.gnb > ul > li:nth-child(4) > div{margin-left: 950px;}
+.gnb > ul > li:last-child > div{margin-left: 1070px;} 
+
+/*   탑메뉴   */
+.header_inner > ul.top_menu{position: absolute;right: 280px;top: 0;line-height: 64px;}
+.top_menu > li{float: left;}
+.top_menu > li:first-child{position: absolute; right: 140px;}
+.top_menu > li:first-child > a{display: block;width: 88px; background: url(../images/mall_header2.png) no-repeat 0 23px;background-size: 88px;text-indent: -9999px;overflow: hidden;}
+
+.top_menu > li:nth-child(2){width: 110px; padding: 0 30px; text-align: center;}
+.top_menu > li:nth-child(2) > a{display: block;font-size: 16px;font-weight: 600;}
+.top_menu > li:nth-child(2) > a > i{margin-left: 10px;transform: rotate(0deg);transform-origin: center;}
+.top_menu > li:nth-child(2) > ul{display: none;}
+.top_menu > li:nth-child(2) > ul > li{padding: 0 35px;border: 1px solid #b2b2b2;background: #fff;}
+.top_menu > li:nth-child(2) > ul > li > a{display: block;font-size: 16px;font-weight: 700; color: #b2b2b2;}
+
+.top_menu > li:nth-child(2):active > a > i{transform: rotate(180deg);transform-origin: center;} 
+
+.top_menu > li:nth-child(2):active > ul{display: block;}
+.top_menu > li:nth-child(2) > ul > li:hover > a{color: #101820;}
+
+/*  검색버튼  */
+div.btn_srch{position: absolute;right: 280px;top: 21px;}
+div.btn_srch > a{display: block;width: 23px;height: 23px; background: url(../images/btn_srch_ico_b.png) no-repeat 0 0;text-indent: -9999px;overflow: hidden;}
+
+/*  통합검색  */
+.header_wrap > div.srch_wrap{display: none; position: fixed;left: 0;top: 0;width: 100%;height: 320px; border-bottom: 1px solid #cfd1d2; background:#fff;}
+.header_wrap > div.srch_wrap:before{content: "";position: absolute;left: 0;top: 64px;z-index: 1; width: 100%;height: 1px;background: #cfd1d2;}
+div.srch_wrap > h1.logo_inner{position: absolute;left: 270px;top:0;}
+div.srch_wrap > h1.logo_inner > a{display: block;width: 135px;height: 64px;background: url(../images/logo_b.png) no-repeat 0 50%;text-indent: -9999px;overflow: hidden;}
+
+div.srch_wrap > div.srch_inner{position:relative;width: 670px;margin: 0 auto; background:#fff;}
+div.srch_inner > form{width: 100%;}
+div.srch_inner > form:hover{border-bottom: 1px solid #101820;}
+div.srch_inner > form > fieldset{height: 64px;}
+div.srch_inner > form > fieldset > input{position: absolute;left: 0;top: 0; width: 640px; height: 64px;border: none; font-size: 15px;color: #76777b; line-height: 1.25;}
+div.srch_inner > form > fieldset > button{position: absolute;right: 0;top: 0; width: 23px;height: 64px;border: none;background: url(../images/btn_srch_ico_b.png) no-repeat 0 50%;text-indent: -9999px;overflow: hidden;cursor: pointer;}
+div.srch_inner > div{position: absolute;}
+div.srch_inner > div > h3{padding:20px 0 10px 0;font-size: 16px;font-weight: 700;color: #76777b;}
+div.srch_inner > div > ul > li{display: inline-block;margin:10px 4px 0 0; border: 1px solid #d8d8d8;border-radius: 4px; background: #f7f7f7;}
+div.srch_inner > div > ul > li:hover{border: 1px solid #0072e3;}
+div.srch_inner > div > ul > li > a{display: block;padding: 4px 10px;font-size: 16px;color: #76777b;}
+div.srch_inner > div > ul > li:hover > a{color: #0072e3;}
+
+div.srch_wrap  > button.btn_srch_close{display: block; position: absolute;right: 270px; top: 0; width: 17px;height: 64px;padding: 0 20px; border: 2px solid #101820;border-radius: 3px; background: url(../images/btn_close_ico_b.png) no-repeat 50% 50%;text-indent: -9999px;overflow: hidden;cursor: pointer;}
+
+/*  container  */
+/*  content1  */
+div.content1 > h2{padding:20px 0; font-size: 64px;font-weight: 700;text-align: center;}
+div.content1 > ul{padding:20px 0;text-align: center;}
+div.content1 > ul > li{display: inline-block;margin: 5px; padding: 7.5px 20px; border: 1px solid #101820;border-radius: 5px;}
+div.content1 > ul > li.on{background: #101820;}
+div.content1 > ul > li.on > a{color: #fff;}
+div.content1 > ul > li:active,
+div.content1 > ul > li:hover{background: #101820;}
+div.content1 > ul > li > a{display: block;font-size: 16px;}
+div.content1 > ul > li:active > a,
+div.content1 > ul > li:hover > a{color: #fff;}
+
+div.content1 > table{width: 100%;margin-bottom: 110px;border: 1px solid #d8d8d8; text-align: center;font-size: 15px; box-sizing: border-box;}
+div.content1 > table thead  th{background: #efefef; text-align: center;line-height: 50px;border-right: 1px solid #d8d8d8;}
+div.content1 > table thead  th:first-child{width: 150px;}
+div.content1 > table thead  th:nth-child(2){width: 434px;}
+div.content1 > table thead  th:nth-child(3){width: 150px;}
+div.content1 > table thead  th:last-child{width: 167px;border-right: none;}
+
+div.content1 > table tbody td{text-align: center;line-height: 52px;border-top: 1px solid #d8d8d8;} 
+div.content1 > table tbody td:first-child{border-right: 1px solid #d8d8d8;}
+div.content1 > table tbody td:nth-child(2){border-right: 1px solid #d8d8d8;}
+div.content1 > table tbody td:nth-child(3){border-right: 1px solid #d8d8d8;}
+div.content1 > table tbody td:last-child > a{position: relative; padding: 8px 20px 8px 20px; border: 1px solid #101820;background:transparent;color: #101820;}
+div.content1 > table tbody td:last-child > a:hover{color: #fff;}
+div.content1 > table tbody td:last-child > a > span{display:inline-block;position: relative; z-index: 1;}
+div.content1 > table tbody td:last-child > a:before{content: "";position: absolute;top: -2px;right: -2px;bottom: -2px;left: -2px;background: #0071e3;transform: scale(0,1);transform-origin: right center;
+                                                    transition: transform 0.3s cubic-bezier(0.25, 0.45, 0.5, 1);}
+div.content1 > table tbody td:last-child > a:hover:before{transform: scale(1,1);transform-origin: left center;}
+
+div.content1 > p{text-align: center;}
+div.content1 > p > a{display: inline-block;width: 36px;font-size: 15px; height: 36px; color: #54565b;line-height: 34px;}
+div.content1 > p > a.on{color: #101820;}
+div.content1 > p > a:first-child {width: 40px;height: 36px;color: #b2b2b2;}
+div.content1 > p > a.page{display:inline-block; position: relative;}
+div.content1 > p > a.page:hover{color: #0071e3;}
+div.content1 > p > a.page:after{content: "";position: absolute;top: 100%;left: 50%;width:0;height: 2px;background: #0071E3;transform: scale(0,1);transform: translateX(-50%);
+                                transition: width 0.3s ease-in-out;}
+div.content1 > p > a.page:hover:after{width: 100%;}
+div.content1 > p > a.on.page::after{content: "";position: absolute;top: 100%;left: 50%;width: 100%;height: 2px;background: #101820;}
+div.content1 > p > a.on.page:active{color: #101820;}
+div.content1 > p > a.on.page:active:active:after{content: "";position: absolute;top: 100%;left: 50%;width: 100%;height: 2px;background: #101820;}
+div.content1 > p > a:last-child{width: 40px;height: 36px;}
+
+/*  footer  */
+/*  footer > .addr  */
+div.footer_inner > div.addr{float: left;margin: 0 155px 70px 0; width: 305px;}
+div.addr > p:first-of-type > a{display: block; width: 135px;height: 21px;padding: 18px 0; background: url(../images/logo_b.png) no-repeat 0 18px; text-indent: -9999px;overflow: hidden;}
+div.addr > address{padding: 10px 0; font-size: 14px;color: #54565b; line-height: 1.5;}
+div.addr > p:last-of-type{padding-bottom: 20px;font-size: 14px;color: #54565b; line-height: 1.5;}
+
+div.addr > ul{padding: 10px 0;}
+div.addr > ul.footer_mall > li{display: inline-block;padding-right: 10px; border-right: 1px solid #b2b2b2;}
+div.addr > ul.footer_mall > li:last-of-type{padding-left: 10px; border-right: none;}
+div.addr > ul.footer_mall > li > a{display: block;font-size: 15px;color: #101820;}
+
+div.addr > ul.footer_sns > li{display: inline-block; padding-right: 20px;}
+div.addr > ul.footer_sns > li > a{display: block; font-size: 24px; color: #101820;}
+div.addr > ul.footer_sns > li > a > i{color: #101820;}
+div.addr > ul.footer_sns > li:hover > a > i{color: #54565b;}
+div.addr > ul.footer_sns > li:last-child > a{width: 21px;height: 21px; background: url(../images/icon_blog_b.png) no-repeat 0 90%;text-indent: -9999px;overflow: hidden;}
+div.addr > ul.footer_sns > li:last-child:hover > a{background: url(../images/icon_blog.png) no-repeat 0 90%;}
+
+/*  footer > .sitemap  */
+div.footer_inner > div.sitemap{float: left; width: 800px;}
+div.sitemap > ul{padding: 18px 0;}
+
+div.sitemap > ul:after{content: "";display: block;clear: both;}
+div.sitemap > ul > li{float: left;}
+div.sitemap > ul > li > a{display: block;margin-right:100px; padding-bottom: 20px; font-size: 15px;font-weight: 600;}
+div.sitemap > ul > li > ul > li > a{display: block; font-size: 15px;color: #404148;line-height: 2;}
+
+/*  footer > .btn_top */
+div.footer_inner > div.btn_top{float: right; width: 30px;height: 30px;margin-top: 18px;}
+div.btn_top > a{display: block;width: 30px;height: 30px; border: none;background: #101820 url(../images/btn_top_w.png) no-repeat 50% 50% ;text-indent: -9999px;overflow: hidden;
+                transition: background 0.3s ease-in-out;-o-transition: background 0.3s ease-in-out;-moz-transition: background 0.3s ease-in-out; -webkit-transition: background 0.3s ease-in-out;}
+div.btn_top:hover > a{background: #0071E3 url(../images/btn_top_w.png) no-repeat 50% 50%;}
+div.btn_top:active > a{background: #0071E3 url(../images/btn_top_w.png) no-repeat 50% 50%;}
+
+/*  footer > inner_bottom */
+div.footer_inner > div.inner_bottom{clear: both;}
+.bottom_menu{float: left;}
+.bottom_menu > ul > li{display: inline-block; position: relative; padding: 0 10px; font-size: 15px;}
+.bottom_menu > ul > li > a{display: block; font-size: 15px;color: #54565b; line-height: 21px;
+                           transition: color 0.3s ease-in-out;-o-transition:  color 0.3s ease-in-out;-moz-transition:  color 0.3s ease-in-out;-webkit-transition:  color 0.3s ease-in-out;}
+.bottom_menu > ul > li:hover > a{color: #101820;}
+.bottom_menu > ul > li > a:after{content: "";position: absolute;left: 0;top:5px; width: 1px;height: 15px;background: #b2b2b2;}
+.bottom_menu > ul > li:first-child{padding-left: 0; background:none;}
+.bottom_menu > ul > li:nth-child(3){font-weight: bold; color: #101820;}
+
+.familysite{position: relative; float: right; width: 210px;}
+.familysite > ul > li > button{position: relative;right: 0;top: 0; width: 210px; border: none;padding: 8px 0; background:transparent;font-size: 14px;text-align: left;}
+.familysite > ul > li > button > i{position: absolute;right:0; transform: rotate(0deg);
+                                   transition: transform 0.3s ease-in-out ; -o-transition: transform 0.3s ease-in-out ; -moz-transition: transform 0.3s ease-in-out ;-webkit-transition: transform 0.3s ease-in-out ;}
+.familysite > ul > li > button:after{content: "";position: absolute;right: 0;bottom: 0; width: 210px;height: 1px;background: #545454;}
+.familysite > ul > li > ul{display: none; position: absolute;right: 0px;bottom:35px; width: 190px; padding: 10px; border: 1px solid #545454; background: #f7f7f7;}
+
+.familysite > ul > li > button:active > i{transform: rotate(180deg);}
+.familysite > ul > li:active > ul{display: block;} 
+
+/*  사이드 버튼  */
+.btn_mall{display: block;position: fixed;right: 15px;bottom: 15px;width: 110px;height: 110px;background: url(../images/homepage_banner3.png);background-size: 110px;text-indent: -9999px;overflow: hidden;}
